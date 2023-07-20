@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="nhapSo" oninput="bang()">   Xếp Loại: <span id="abc"></span>
+
+
+<!--B1. Viết hàm đổi vị trí 2 biến-->
+<!-- a = 10, b = 5-->
+
+
+<!--B2. Viết hàm nhập vào điểm rồi kiểm tra kiểm tra năng lực sinh viên-->
+<!--&lt;!&ndash; VD: điểm > 5 -> Yếu, điểm 5 - > 6 Trung Bình, 7 -> 9 Giỏi, 10 -> xuất sắc &ndash;&gt;-->
+<!--let a = 10, b = 5;-->
+<script>
+    // function doi(a,b) {
+    //   document.writeln("Trc khi doi"+a,b)
+    //   let temp ;
+    //   temp = a;
+    //   a = b;
+    //   b=temp;
+    //   document.writeln("Sau khi doi"+a,b)
+    //
+    // }
+    // doi(323,55);
+
+
+    function bang() {
+        let a = document.getElementById("nhapSo").value
+        diem(a)
+    }
+
+
+    function diem(a) {
+
+        if (a > 0 && a < 5) {
+            document.getElementById("abc").innerHTML = "yếu"
+        } else if (a == 5 || a == 6) {
+           document.getElementById("abc").innerHTML = "Trung Binh"
+        } else if (a > 6 || a == 9) {
+           document.getElementById("abc").innerHTML = "Khá"
+        } else if (a == 10) {
+           document.getElementById("abc").innerHTML = "Giỏi"
+        } else {
+           document.getElementById("abc").innerHTML = "Ngoại lệ"
+
+        }
+    }
+
+
+</script>
+</body>
+</html>
