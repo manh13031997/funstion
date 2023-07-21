@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(a) {
+        let temp = 0;
+        for (let i = 2; i < a ; i++) {
+            if (a%i==0){
+                temp= 1
+                return temp
+            }
+        }
+        return  temp;
+    }
+
+    let number;
+    do {
+        number = +prompt("nhập số")
+    } while (number >= 1000 || number <= 1)
+    if (isPrime(number)==0){
+        document.writeln("số nguyên to")
+    }else {
+        document.writeln("không là số nguyên tố")
+    }
+
+</script>
+</body>
+</html>
